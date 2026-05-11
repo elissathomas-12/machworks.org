@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sponsor Us · MachWorks</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="nav-mount"></div>
+
+<div class="page-hero" style="background:var(--black);position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 60%,rgba(233,113,50,0.1) 0%,transparent 65%);pointer-events:none;"></div>
+  <div class="page-hero-inner" style="position:relative;z-index:1;">
+    <p class="section-label">Support MachWorks</p>
+    <h1 class="section-title" style="font-size:clamp(3rem,7vw,6rem);">Sponsor Us</h1>
+    <p class="section-body">Partner with the undergraduate team pushing the boundaries of high-speed autonomous flight at Virginia Tech.</p>
+  </div>
+</div>
+
+<section>
+  <div style="max-width:1000px;margin:0 auto;">
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-bottom:5rem;" class="reveal">
+      <div>
+        <p class="section-label">Why Sponsor MachWorks?</p>
+        <h2 class="section-title" style="font-size:clamp(2rem,4vw,3rem);">Invest in the<br />Next Generation</h2>
+        <p class="section-body" style="margin-bottom:1rem;">Your support directly funds cutting-edge aerospace engineering research performed by talented undergraduate students at one of the nation's top engineering schools.</p>
+        <p class="section-body" style="margin-bottom:1rem;">MachWorks sponsors gain access to a pipeline of highly motivated aerospace and engineering graduates, brand visibility within the Virginia Tech engineering community, and the satisfaction of helping make aerospace history.</p>
+        <p class="section-body">For custom sponsorship packages or questions, reach us at <a href="mailto:machworksvt@gmail.com" style="color:var(--orange);">machworksvt@gmail.com</a>.</p>
+      </div>
+      <div>
+        <p class="section-label" style="margin-bottom:1.25rem;">Sponsorship Tiers</p>
+        <div style="display:flex;flex-direction:column;gap:1rem;">
+          <div style="background:var(--surface);border:1px solid var(--orange);border-radius:6px;padding:1.25rem;">
+            <div style="font-family:var(--font-display);font-size:1.6rem;color:var(--orange);">Platinum</div>
+            <div style="font-size:0.82rem;color:var(--text-dim);margin-top:0.25rem;">$5,000+ · Premier logo placement, recruiting access, team liaison</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.25rem;">
+            <div style="font-family:var(--font-display);font-size:1.6rem;color:#D4AF37;">Gold</div>
+            <div style="font-size:0.82rem;color:var(--text-dim);margin-top:0.25rem;">$2,500+ · Logo on aircraft &amp; website, event invitations</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.25rem;">
+            <div style="font-family:var(--font-display);font-size:1.6rem;color:#9E9E9E;">Silver</div>
+            <div style="font-size:0.82rem;color:var(--text-dim);margin-top:0.25rem;">$1,000+ · Logo on website, social media recognition</div>
+          </div>
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:1.25rem;">
+            <div style="font-family:var(--font-display);font-size:1.6rem;color:#b87333;">Bronze</div>
+            <div style="font-size:0.82rem;color:var(--text-dim);margin-top:0.25rem;">$500+ / In-Kind · Website listing, thank-you recognition</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:2.5rem;">
+      <p class="section-label">Reach Out</p>
+      <h2 class="section-title" style="font-size:2rem;margin-bottom:1.5rem;">Contact Our Sponsorship Team</h2>
+      <form class="contact-form" id="sponsor-form">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <input type="text" placeholder="Name *" required />
+          <input type="email" placeholder="Email *" required />
+        </div>
+        <input type="text" placeholder="Company / Organization *" required />
+        <input type="text" placeholder="Sponsorship tier of interest" />
+        <textarea placeholder="Tell us about your organization and how you'd like to partner with MachWorks..."></textarea>
+        <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        <p id="sponsor-status"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<div id="footer-mount"></div>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.getElementById('sponsor-form').addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('sponsor-status').textContent = 'Thank you! Our sponsorship team will reach out shortly.';
+  e.target.reset();
+});
+</script>
+</body>
+</html>
