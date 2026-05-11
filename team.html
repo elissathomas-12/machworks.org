@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Team · MachWorks</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="nav-mount"></div>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <p class="section-label">People</p>
+    <h1 class="section-title" style="font-size:clamp(3rem,7vw,6rem);">Our Team</h1>
+    <p class="section-body">A group of passionate Virginia Tech engineering students working hard to make the impossible a reality.</p>
+  </div>
+</div>
+
+<section>
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:flex;gap:1rem;margin-bottom:2.5rem;flex-wrap:wrap;" class="reveal">
+      <button class="btn btn-primary team-filter-btn" data-filter="all">All Members</button>
+      <button class="btn btn-outline team-filter-btn" data-filter="Aerodynamics">Aerodynamics</button>
+      <button class="btn btn-outline team-filter-btn" data-filter="Propulsion">Propulsion</button>
+      <button class="btn btn-outline team-filter-btn" data-filter="Controls">Controls</button>
+      <button class="btn btn-outline team-filter-btn" data-filter="Structures">Structures</button>
+      <button class="btn btn-outline team-filter-btn" data-filter="Business">Business</button>
+    </div>
+  </div>
+
+  <div class="team-grid" id="team-grid">
+    <!-- Add your team members here. Copy/paste this block for each member. -->
+    <div class="team-card reveal" data-group="Aerodynamics">
+      <div class="team-photo">✈</div>
+      <div class="team-card-body">
+        <div class="team-name">[ Member Name ]</div>
+        <div class="team-role">Aerodynamics</div>
+        <div class="team-major">Aerospace Engineering, '26</div>
+      </div>
+    </div>
+    <div class="team-card reveal" data-group="Propulsion" style="transition-delay:0.04s;">
+      <div class="team-photo">🔥</div>
+      <div class="team-card-body">
+        <div class="team-name">[ Member Name ]</div>
+        <div class="team-role">Propulsion</div>
+        <div class="team-major">Mechanical Engineering, '27</div>
+      </div>
+    </div>
+    <div class="team-card reveal" data-group="Controls" style="transition-delay:0.08s;">
+      <div class="team-photo">⚡</div>
+      <div class="team-card-body">
+        <div class="team-name">[ Member Name ]</div>
+        <div class="team-role">Autonomy &amp; Controls</div>
+        <div class="team-major">Computer Engineering, '25</div>
+      </div>
+    </div>
+    <div class="team-card reveal" data-group="Structures" style="transition-delay:0.12s;">
+      <div class="team-photo">🔩</div>
+      <div class="team-card-body">
+        <div class="team-name">[ Member Name ]</div>
+        <div class="team-role">Structures</div>
+        <div class="team-major">Aerospace Engineering, '26</div>
+      </div>
+    </div>
+    <div class="team-card reveal" data-group="Business" style="transition-delay:0.16s;">
+      <div class="team-photo">📊</div>
+      <div class="team-card-body">
+        <div class="team-name">[ Member Name ]</div>
+        <div class="team-role">Business &amp; Outreach</div>
+        <div class="team-major">Business, '27</div>
+      </div>
+    </div>
+    <div class="team-card reveal" data-group="Aerodynamics" style="transition-delay:0.2s;">
+      <div class="team-photo">✈</div>
+      <div class="team-card-body">
+        <div class="team-name">[ Member Name ]</div>
+        <div class="team-role">Aerodynamics</div>
+        <div class="team-major">Aerospace Engineering, '28</div>
+      </div>
+    </div>
+    <!-- Continue adding members... -->
+  </div>
+
+  <div style="margin-top:3.5rem;text-align:center;" class="reveal">
+    <p class="section-body" style="margin:0 auto 1.5rem;max-width:460px;">Want to be part of MachWorks? We're always looking for driven students across all engineering disciplines.</p>
+    <a href="contact.html" class="btn btn-primary">Join Us</a>
+  </div>
+</section>
+
+<div id="footer-mount"></div>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Team filter
+const filterBtns = document.querySelectorAll('.team-filter-btn');
+const cards = document.querySelectorAll('.team-card[data-group]');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.replace('btn-primary','btn-outline'));
+    btn.classList.replace('btn-outline','btn-primary');
+    const f = btn.dataset.filter;
+    cards.forEach(c => {
+      c.style.display = (f === 'all' || c.dataset.group === f) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
